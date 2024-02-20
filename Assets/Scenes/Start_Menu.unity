@@ -302,6 +302,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 488329514}
+  - component: {fileID: 488329515}
   m_Layer: 0
   m_Name: ScoreManager
   m_TagString: Untagged
@@ -324,6 +325,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &488329515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488329513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 523afb9675bf8d84a96960629ef012bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPlayerName: 
 --- !u!1 &521334312
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,8 +803,9 @@ GameObject:
   - component: {fileID: 1573742268}
   - component: {fileID: 1573742267}
   - component: {fileID: 1573742266}
+  - component: {fileID: 1573742269}
   m_Layer: 5
-  m_Name: InputField (TMP)
+  m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -895,7 +910,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1573742269}
+        m_TargetAssemblyTypeName: NameSetter, Assembly-CSharp
+        m_MethodName: OnChangeName
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -952,6 +979,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573742264}
   m_CullTransparentMesh: 1
+--- !u!114 &1573742269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573742264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 975432bc942eb8740973b84cd5ad775f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentName: {fileID: 1573742266}
 --- !u!1 &1667632404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1167,7 +1207,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: Name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1671,7 +1711,7 @@ GameObject:
   - component: {fileID: 2123266793}
   - component: {fileID: 2123266792}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Best_Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1716,7 +1756,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Best Score: Name - Score'
+  m_text: 'Best Score:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
